@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: jenkins-sapi
+
+/jenkins:
+  get:
+    queryParameters:
+      test:
+        type: string
+        minLength: 4
+        maxLength: 4
+        example: "name"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "Name": "Gulam",
+                "City": "Hyderabad",
+                "Email": "sgr772@gmail.com"
+              }    
+          
